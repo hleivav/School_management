@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.Sequencers.CourseSequencer;
+import org.example.Sequencers.LectureSequencer;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,7 +12,8 @@ public class Course {
     private String courseName;
     private LocalDate startDate;
     private int weekDuration;
-    private ArrayList<Student> students;
+    private ArrayList<Student> students = new ArrayList<>();
+    private ArrayList<Lecture> lectures = new ArrayList<>();
 
     //constructor
     public Course(String courseName, LocalDate startDate, int weekDuration) {
@@ -58,8 +60,8 @@ public class Course {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+    public ArrayList<Lecture> getLectures(){
+        return lectures;
     }
 
     //methods
@@ -69,5 +71,13 @@ public class Course {
 
     public void unRegister(Student student){
         students.remove(student);
+    }
+
+    public void addLecture(Lecture lecture){
+        lectures.add(lecture);
+    }
+
+    public void removeLecture(Lecture lecture){
+        lectures.remove(lecture);
     }
 }
