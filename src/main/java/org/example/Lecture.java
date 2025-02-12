@@ -6,12 +6,12 @@ public class Lecture {
     //fields
     private int id;
     private String name;
-    private String email;
+    private int courseId;
 
     //constructor
-    public Lecture(String name, String email) {
+    public Lecture(String name, int courseId) {
         this.name = name;
-        this.email = email;
+        this.courseId = courseId;
         this.id = LectureSequencer.nextId();
     }
 
@@ -34,11 +34,12 @@ public class Lecture {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+
+    public int getCourseId(){
+        return courseId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCourseId(int courseId){
+        this.courseId = courseId;
     }
 }
