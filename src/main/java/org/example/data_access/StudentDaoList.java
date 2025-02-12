@@ -68,4 +68,8 @@ public class StudentDaoList implements StudentDAO{
         }
         return false;
     }
+
+    public static void clearStudents(){
+        students.clear();
+    }
 }

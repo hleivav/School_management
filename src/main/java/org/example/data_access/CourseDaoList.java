@@ -71,4 +71,8 @@ public class CourseDaoList implements CourseDAO{
         }
         return false;
     }
+
+    public static void clearCourses(){
+        courses.clear();
+    }
 }
