@@ -1,6 +1,7 @@
 package org.example;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -70,6 +71,12 @@ public class Main {
         Teacher teacher2 = new Teacher("Linda Fox", "linda.fox@lexikon.se", course2);
         Teacher teacher3 = new Teacher("Silvio Moretti", "silvio.moretti@lexikon.se", course3);
 
-                System.out.println("Hello, World!");
+        Scanner scanner = new Scanner(System.in);
+        boolean done = false;
+        while(!done){
+            Menu.showMenu();
+            String input = scanner.nextLine();
+            done = Menu.checkOptions(input);
+        }
     }
 }
